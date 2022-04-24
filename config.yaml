@@ -1,6 +1,6 @@
 # Input the path information for Conda and the workflow directories
-workflow_dir: "/path/to/nanopore-workflow"
-conda_dir: "/path/to/conda/envs/nanopore-workflow/bin"
+workflow_dir: "/path/to/nanopore-SV-analysis"
+conda_dir: "/path/to/conda/envs/nanopore-SV-analysis/bin"
 
 # Input sample names to be analyzed.  The folder for each sample should be in the same directory as this file.
 samples: ['Sample_1', 'Sample_2']
