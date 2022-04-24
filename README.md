@@ -31,7 +31,7 @@ conda activate nanopore-SV-analysis
 Copy the `Snakefile` and `config.yaml` files to the directory that you want to run the workflow. Modify the input in `config.yaml` for the FASTQs and sample names for the samples. There are a few different grid engines, so the exact format to run the workflow may be different for your particular grid engine:
 
 ```
-snakemake --jobs 500 --rerun-incomplete --keep-going --latency-wait 60 --cluster "qsub -cwd -V -o snakemake.output.log -e snakemake.error.log -q queue_name -P project_name -pe smp {threads} -l h_vmem={params.memory_per_thread} -l h_rt={params.run_time} -b y" all_but_assembly
+snakemake --jobs 500 --rerun-incomplete --keep-going --latency-wait 60 --cluster "qsub -cwd -V -o snakemake.output.log -e snakemake.error.log -q queue_name -P project_name -pe smp {threads} -l h_vmem={params.memory_per_thread} -l h_rt={params.run_time} -b y"
 ```
 
 You will have to replace `queue_name` and `project_name` with the necessary values to run on your grid.
