@@ -1,0 +1,23 @@
+name: nanopore-SV-analysis
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bcftools
+  - bedtools
+  - bioconductor-karyoploter
+  - cutesv
+  - longshot
+  - nanofilt=2.8.0
+  - nanoplot=1.20.0
+  - pybedtools
+  - pysam
+  - pyvcf
+  - seaborn=0.10.0
+  - snakemake
+  - sniffles
+  - survivor
+  - svim
+  - whatshap
+  - winnowmap
