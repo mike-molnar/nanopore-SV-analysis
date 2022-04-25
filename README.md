@@ -28,7 +28,7 @@ conda activate nanopore-SV-analysis
 
 ## To run on a grid engine
 
-Copy the `Snakefile` and `config.yaml` files to the directory that you want to run the workflow.  Modify the information in `config.yaml` for the FASTQs and sample names for the samples of the run. There are a few different grid engines, so the exact format to run the workflow may be different for your particular grid engine:
+Copy the `Snakefile` and `config.yaml` files to the directory that you want to run the workflow.  Modify the information in `config.yaml` for your sample names and FASTQ locations. There are a few different grid engines, so the exact format to run the workflow may be different for your particular grid engine:
 
 ```
 snakemake --jobs 500 --rerun-incomplete --keep-going --latency-wait 60 --cluster "qsub -cwd -V -o snakemake.output.log -e snakemake.error.log -q queue_name -P project_name -pe smp {threads} -l h_vmem={params.memory_per_thread} -l h_rt={params.run_time} -b y"
