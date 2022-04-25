@@ -1,5 +1,5 @@
 # Nanopore-SV-Analysis
-Structural variant filtering and anlaysis of Nanopore human WGS data.
+Structural variant filtering and analysis of Nanopore human WGS data.
 
 ## Installation instructions
 
