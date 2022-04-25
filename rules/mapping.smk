@@ -1,7 +1,7 @@
 # Filter out short or low quality reads
 rule nanofilt:
     input:
-        "{sample}/fastq/{sample}.fastq"
+        lambda wildcards: config[wildcards.sample]
     output:
         protected("{sample}/fastq/{sample}.fastq.gz")
     params:
