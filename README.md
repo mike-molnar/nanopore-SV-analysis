@@ -26,6 +26,25 @@ conda env create -n nanopore-SV-analysis -f nanopore-SV-analysis.yml
 conda activate nanopore-SV-analysis
 ```
 
+Below is a list of the Conda dependencies:
+- BCFtools
+- bedtools
+- karyoploteR
+- cuteSV
+- Longshot
+- NanoFilt v2.8.0
+- NanoPlot v1.20.0
+- pybedtools
+- PySAM
+- PyVCF
+- Seaborn v0.10.0
+- Snakemake
+- Sniffles2
+- SURVIVOR
+- SVIM
+- WhatsHap
+- Winnowmap2
+
 ## To run on a grid engine
 
 Copy the `Snakefile` and `config.yaml` files to the directory that you want to run the workflow.  Modify the information in `config.yaml` for your sample names and FASTQ locations. There are a few different grid engines, so the exact format to run the workflow may be different for your particular grid engine:
