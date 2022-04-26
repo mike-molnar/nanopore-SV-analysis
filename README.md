@@ -37,7 +37,7 @@ Below is a list of the Conda dependencies:
 - pybedtools
 - PySAM
 - PyVCF
-- Seaborn v0.10.0
+- seaborn v0.10.0
 - Snakemake
 - Sniffles2
 - SURVIVOR
