@@ -1,7 +1,7 @@
 # Nanopore-SV-Analysis
 Structural variant filtering and analysis of Nanopore human WGS data.
 
-![nanopore-SV-analysis](https://user-images.githubusercontent.com/39533525/165214868-a5a7f46b-bb8d-447f-bc3c-59bb0e1b5c72.png)
+![nanopore-SV-analysis](https://user-images.githubusercontent.com/39533525/165219632-9dd89a98-53dd-4abd-9701-df7fe990a21a.png)
 
 ## Installation instructions
 
