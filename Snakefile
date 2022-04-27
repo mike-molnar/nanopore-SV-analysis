@@ -15,8 +15,8 @@ high_frequency_kmers = config["workflow_dir"] + "/reference/GRCh38_high_frequenc
 genome_gaps = config["workflow_dir"] + "/reference/GRCh38_gaps.bed"
 genes = config["workflow_dir"] + "/reference/GRCh38_genes.bed"
 genome_length = 3100000000
-chromosomes = [chr1 ,chr2 ,chr3 ,chr4 ,chr5 ,chr6 ,chr7 ,chr8 ,chr9 ,chr10 ,chr11 ,chr12 ,chr13,
-               chr14 ,chr15 ,chr16 ,chr17 ,chr18 ,chr19 ,chr20 ,chr21 ,chr22 ,chrX ,chrY]
+chromosomes = ['chr1','chr2','chr3','chr4','chr5','chr6','chr7','chr8','chr9','chr10','chr11','chr12','chr13',
+               'chr14','chr15','chr16','chr17','chr18','chr19','chr20','chr21','chr22','chrX','chrY']
 
 # Get the mean coverage for the dataset
 def get_coverage(sample_name):
