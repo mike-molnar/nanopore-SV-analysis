@@ -180,15 +180,16 @@ rule haplotag_bam:
     params:
         memory_per_thread="16G",
         run_time="1:0:0:0",
-        RG="--ignore-read-groups"
+        RG="--ignore-read-groups",
+        noSNVs="--skip-missing-contigs"
     log:
         "{sample}/analysis/logs/temp_files/whatshap/{regions}/{sample}.{regions}.phased.log"
     benchmark:
         "{sample}/analysis/benchmarks/temp_files/whatshap/{regions}/{sample}.{regions}.phased.txt"
     threads: 1
     shell:
-        "{conda_dir}/whatshap haplotag {params.RG} --regions {wildcards.regions} --reference {reference} \
-        {input.vcf} {input.bam} 2> {log} | {conda_dir}/samtools sort -o {output} &>> {log}"
+        "{conda_dir}/whatshap haplotag {params.RG} {params.noSNVs} --regions {wildcards.regions} \
+        --reference {reference} {input.vcf} {input.bam} 2> {log} | {conda_dir}/samtools sort -o {output} &>> {log}"
 
 # Merge the phased bam files
 rule merge_bam:
