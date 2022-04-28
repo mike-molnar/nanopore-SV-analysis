@@ -11,14 +11,6 @@ Download the latest code from GitHub:
 git clone https://github.com/mike-molnar/nanopore-SV-analysis.git
 ```
 
-You will need to download the reference genome manually before running the workflow. I have not included the download as part of the workflow because it is designed to run on a cluster that may not have internet access.  You can use a local copy of GRCh38 if you have one, but the reference can only contain the autosomes and sex chromosomes, and the chromosomes must be named `chr1, chr2, ...,chrX, chrY`. To download the reference genome and index it, change to the reference directory of the workflow and run the `download_reference.sh` script:
-
-```
-cd /path/to/nanopore-SV-analysis/reference
-chmod u+x download_reference.sh
-./download_reference.sh
-```
-
 ## Dependencies
 
 There are many dependencies so it is best to create a new Conda environment using the provided YAML file:
@@ -46,6 +38,15 @@ Below is a list of the Conda dependencies:
 - SVIM
 - WhatsHap
 - Winnowmap2
+
+## Reference genome
+You will need to download the reference genome manually before running the workflow. I have not included the download as part of the workflow because it is designed to run on a cluster that may not have internet access.  You can use a local copy of GRCh38 if you have one, but the reference can only contain the autosomes and sex chromosomes, and the chromosomes must be named `chr1, chr2, ...,chrX, chrY`. To download the reference genome and index it, change to the reference directory of the workflow and run the `download_reference.sh` script:
+
+```
+cd /path/to/nanopore-SV-analysis/reference
+chmod u+x download_reference.sh
+./download_reference.sh
+```
 
 ## To run on a grid engine
 
