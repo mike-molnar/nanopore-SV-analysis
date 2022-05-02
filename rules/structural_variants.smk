@@ -73,9 +73,9 @@ rule vcf2bedpe_sniffles:
         memory_per_thread="8G",
         run_time="0:1:0:0"
     log:
-        "{sample}/analysis/logs/structural_variants/svim/{sample}.vcf2bedpe_svim.log"
+        "{sample}/analysis/logs/structural_variants/sniffles/{sample}.vcf2bedpe_sniffles.log"
     benchmark:
-        "{sample}/analysis/benchmarks/structural_variants/svim/{sample}.vcf2bedpe_svim.txt"
+        "{sample}/analysis/benchmarks/structural_variants/sniffles/{sample}.vcf2bedpe_sniffles.txt"
     threads: 1
     shell:
         "{conda_dir}/python {scripts_dir}/vcf2bedpe.py {input} {output} &> {log}"
