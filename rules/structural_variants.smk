@@ -39,7 +39,7 @@ rule vcf2bedpe_cuteSV:
         "{sample}/analysis/benchmarks/structural_variants/cuteSV/{sample}.vcf2bedpe_cuteSV.txt"
     threads: 1
     shell:
-        "{conda_dir}/python {scripts_dir}/vcf2bedpe_cuteSV.py {input} {output} &> {log}"
+        "{conda_dir}/python {scripts_dir}/vcf2bedpe.py -i {input} -o {output} &> {log}"
 
 # Find structural variants with sniffles
 rule sniffles:
@@ -78,7 +78,7 @@ rule vcf2bedpe_sniffles:
         "{sample}/analysis/benchmarks/structural_variants/sniffles/{sample}.vcf2bedpe_sniffles.txt"
     threads: 1
     shell:
-        "{conda_dir}/python {scripts_dir}/vcf2bedpe.py {input} {output} &> {log}"
+        "{conda_dir}/python {scripts_dir}/vcf2bedpe.py -i {input} -o {output} &> {log}"
         
 # Find structural variants with SVIM
 rule svim:
@@ -114,7 +114,7 @@ rule vcf2bedpe_svim:
         "{sample}/analysis/benchmarks/structural_variants/svim/{sample}.vcf2bedpe_svim.txt"
     threads: 1
     shell:
-        "{conda_dir}/python {scripts_dir}/vcf2bedpe.py {input} {output} &> {log}"
+        "{conda_dir}/python {scripts_dir}/vcf2bedpe.py -i {input} -o {output} &> {log}"
 
 # Normalize the SVIM calls to match sniffles and cuteSV 
 rule normalize_svim_calls:
