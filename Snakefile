@@ -9,7 +9,7 @@ conda_dir = config["conda_dir"]
 scripts_dir = config["workflow_dir"] + "/scripts"
 
 # Declare the variables and files needed for the reference genome
-reference = config["workflow_dir"] + "/reference/GRCh38.fa"
+reference = config["reference_dir"] + "/GRCh38.fa"
 chromosome_sizes = config["workflow_dir"] + "/reference/GRCh38_chromosome_sizes.tsv"
 high_frequency_kmers = config["workflow_dir"] + "/reference/GRCh38_high_frequency_kmers.txt"
 genome_gaps = config["workflow_dir"] + "/reference/GRCh38_gaps.bed"
