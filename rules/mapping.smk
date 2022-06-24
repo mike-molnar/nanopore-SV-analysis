@@ -41,7 +41,7 @@ rule winnowmap:
         fastq = "{sample}/fastq/{sample}.fastq.gz",
         index = "{sample}/fastq/{sample}.fastq.gz.gzi"
     output:
-        temp("{sample}/mapped/{sample}.bam")
+        "{sample}/mapped/{sample}.bam"
     params:
         memory_per_thread="8G",
         run_time="7:0:0:0",

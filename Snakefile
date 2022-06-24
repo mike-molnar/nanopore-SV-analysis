@@ -67,10 +67,15 @@ rule filter_fastq:
     input:
         expand("{sample}/fastq/{sample}.fastq.gz", sample=config["samples"])
 
-rule mapping:
+rule variant_calling:
     input:
         expand("{sample}/mapped/{sample}.b_allele_frequency.bed", sample=config["samples"])
         
+rule mapping:
+    input:
+        expand("{sample}/mapped/{sample}.bam", sample=config["samples"]),
+        expand("{sample}/mapped/{sample}.bam.bai", sample=config["samples"])
+
 rule run_SV_analysis:
     input:
         expand("{sample}/analysis/structural_variants/{sample}.insertions.bed", sample=config["samples"]),
@@ -91,3 +96,4 @@ rule run_coverage_analysis:
         expand("{sample}/analysis/coverage/plots/{normal}/{sample}.small_chr.pdf", normal=config["normals"], sample=config["tumors"]),
         expand("{sample}/analysis/coverage/plots/{normal}/{sample}.large_chr.pdf", normal=config["normals"], sample=config["tumors"]),
         expand("{sample}/analysis/coverage/plots/{normal}/{sample}.depth.{chromosome}.pdf", normal=config["normals"], sample=config["tumors"], chromosome=chromosomes)
+
